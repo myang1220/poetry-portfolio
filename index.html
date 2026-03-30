@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Moses Yang — Poetry Portfolio</title>
+    <meta
+      name="description"
+      content="A small collection of poems by Moses Yang — browse by week or open each piece as a PDF."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;600;700&family=Nunito:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <h1 class="brand">
+        Moses Yang
+        <span>Poetry portfolio</span>
+      </h1>
+      <nav class="main-nav hidden" id="main-nav" aria-label="Primary">
+        <button type="button" class="nav-btn" id="nav-gallery">Back to all poems</button>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section id="gallery-view" aria-label="Poem list">
+        <div class="intro">
+          <p>
+            Tap a card to read. Use the chips to filter by week or assignment. Inside a poem, use
+            <strong>Previous</strong> and <strong>Next</strong> to move through the list you have
+            filtered. If a PDF does not show inside the page, use
+            <strong>Open PDF in a new tab</strong>.
+          </p>
+        </div>
+        <div class="filters" id="filter-bar" role="group" aria-label="Filter by category"></div>
+        <div class="poems-grid" id="poems-grid"></div>
+      </section>
+
+      <section id="reader-view" class="hidden" aria-label="Poem reader">
+        <div class="reader">
+          <div class="reader-toolbar">
+            <button type="button" class="back-btn" id="btn-back">← Back to list</button>
+            <div class="reader-title-wrap">
+              <h2 class="reader-title" id="reader-title"></h2>
+              <p class="reader-meta" id="reader-meta"></p>
+            </div>
+            <div class="reader-actions">
+              <button type="button" class="pager" id="btn-prev">Previous</button>
+              <button type="button" class="pager" id="btn-next">Next</button>
+            </div>
+            <p class="open-tab"><a id="pdf-link" href="#" target="_blank" rel="noopener noreferrer"></a></p>
+          </div>
+          <div class="reader-frame-wrap">
+            <iframe id="reader-frame" class="reader-frame" title="Poem PDF"></iframe>
+            <div id="reader-fallback" class="fallback hidden">
+              <p>Your browser may not show PDFs inline.</p>
+              <p><a id="pdf-link-fallback" href="#">Download or open the PDF</a></p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script>
+      (function syncFallbackLink() {
+        var link = document.getElementById("pdf-link");
+        var fb = document.getElementById("pdf-link-fallback");
+        var obs = new MutationObserver(function () {
+          fb.href = link.href;
+        });
+        obs.observe(link, { attributes: true, attributeFilter: ["href"] });
+      })();
+    </script>
+    <script src="app.js"></script>
+  </body>
+</html>
