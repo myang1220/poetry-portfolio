@@ -28,6 +28,8 @@ const POEMS = [
     file: "The Brown shooting concerns - Moses Yang Poetry I Midterm.pdf",
   },
   { title: "Trudging Downstream", category: "Midterm", file: "Trudging Downstream - Moses Yang Poetry I Midterm.pdf" },
+  { title: "Dipty-pical Trauma", category: "Week 9", file: "Dipty-pical Trauma - Moses Yang Poetry I Week 9.pdf" },
+  { title: "you're a human being", category: "Week 10", file: "you're a human being - Moses Yang Poetry I Week 10.pdf" }
 ];
 
 const CATEGORY_ORDER = [
@@ -41,6 +43,8 @@ const CATEGORY_ORDER = [
   "Week 7",
   "Week 8",
   "Midterm",
+  "Week 9",
+  "Week 10"
 ];
 
 const galleryView = document.getElementById("gallery-view");
