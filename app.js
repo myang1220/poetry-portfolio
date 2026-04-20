@@ -29,7 +29,9 @@ const POEMS = [
   },
   { title: "Trudging Downstream", category: "Midterm", file: "Trudging Downstream - Moses Yang Poetry I Midterm.pdf" },
   { title: "Dipty-pical Trauma", category: "Week 9", file: "Dipty-pical Trauma - Moses Yang Poetry I Week 9.pdf" },
-  { title: "you're a human being", category: "Week 10", file: "you're a human being - Moses Yang Poetry I Week 10.pdf" }
+  { title: "you're a human being", category: "Week 10", file: "you're a human being - Moses Yang Poetry I Week 10.pdf" },
+  { title: "Lament From Penelope", category: "Week 11", file: "Lament From Penelope - Moses Yang Poetry I Week 11.pdf"},
+  {title: "小馬", category: "Week 11", file: "小馬 - Moses Yang Poetry I Week 11.pdf"},
 ];
 
 const CATEGORY_ORDER = [
