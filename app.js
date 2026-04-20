@@ -46,7 +46,8 @@ const CATEGORY_ORDER = [
   "Week 8",
   "Midterm",
   "Week 9",
-  "Week 10"
+  "Week 10",
+  "Week 11",
 ];
 
 const galleryView = document.getElementById("gallery-view");
