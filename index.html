@@ -58,6 +58,7 @@
           </div>
           <div class="reader-frame-wrap">
             <iframe id="reader-frame" class="reader-frame" title="Poem PDF"></iframe>
+            <div id="mobile-pdf-viewer" class="mobile-pdf-viewer hidden" aria-live="polite"></div>
             <div id="reader-fallback" class="fallback hidden">
               <p>Your browser may not show PDFs inline.</p>
               <p><a id="pdf-link-fallback" href="#">Download or open the PDF</a></p>
@@ -77,6 +78,7 @@
         obs.observe(link, { attributes: true, attributeFilter: ["href"] });
       })();
     </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/4.4.168/pdf.min.js"></script>
     <script src="app.js"></script>
   </body>
 </html>

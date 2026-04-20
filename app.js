@@ -64,10 +64,75 @@ const pdfLink = document.getElementById("pdf-link");
 const btnBack = document.getElementById("btn-back");
 const btnPrev = document.getElementById("btn-prev");
 const btnNext = document.getElementById("btn-next");
+const mobilePdfViewer = document.getElementById("mobile-pdf-viewer");
 
 let activeFilter = "All";
 let filteredIndices = POEMS.map((_, i) => i);
 let currentPoemIndex = 0;
+let mobileRenderToken = 0;
+
+if (window.pdfjsLib) {
+  window.pdfjsLib.GlobalWorkerOptions.workerSrc =
+    "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/4.4.168/pdf.worker.min.js";
+}
+
+function isMobileReaderMode() {
+  return window.matchMedia("(max-width: 768px)").matches;
+}
+
+function clearMobileViewer() {
+  mobilePdfViewer.innerHTML = "";
+}
+
+function setMobileStatus(message) {
+  mobilePdfViewer.innerHTML = `<p class="mobile-pdf-status">${message}</p>`;
+}
+
+async function renderMobilePdf(path) {
+  const renderToken = ++mobileRenderToken;
+  clearMobileViewer();
+  setMobileStatus("Loading poem...");
+
+  if (!window.pdfjsLib) {
+    setMobileStatus("Could not load the mobile PDF renderer.");
+    return false;
+  }
+
+  try {
+    const loadingTask = window.pdfjsLib.getDocument(path);
+    const pdfDoc = await loadingTask.promise;
+
+    if (renderToken !== mobileRenderToken) return true;
+    clearMobileViewer();
+
+    const viewerWidth = Math.max(mobilePdfViewer.clientWidth || 320, 320);
+    for (let pageNum = 1; pageNum <= pdfDoc.numPages; pageNum += 1) {
+      const page = await pdfDoc.getPage(pageNum);
+      if (renderToken !== mobileRenderToken) return true;
+
+      const viewport = page.getViewport({ scale: 1 });
+      const scale = viewerWidth / viewport.width;
+      const scaledViewport = page.getViewport({ scale });
+      const canvas = document.createElement("canvas");
+      const context = canvas.getContext("2d");
+      canvas.width = Math.floor(scaledViewport.width);
+      canvas.height = Math.floor(scaledViewport.height);
+
+      await page.render({ canvasContext: context, viewport: scaledViewport }).promise;
+      if (renderToken !== mobileRenderToken) return true;
+
+      const pageWrap = document.createElement("div");
+      pageWrap.className = "mobile-pdf-page";
+      pageWrap.appendChild(canvas);
+      mobilePdfViewer.appendChild(pageWrap);
+    }
+
+    return true;
+  } catch (error) {
+    setMobileStatus("This PDF could not be rendered on mobile.");
+    return false;
+  }
+}
 
 function getFilteredIndices() {
   if (activeFilter === "All") return POEMS.map((_, i) => i);
@@ -136,19 +201,34 @@ function openReader(globalIndex) {
 
   readerTitle.textContent = poem.title;
   readerMeta.textContent = poem.category;
-  readerFrame.classList.remove("hidden");
   readerFallback.classList.add("hidden");
-  readerFrame.src = path;
   pdfLink.href = path;
   pdfLink.textContent = "Open PDF in a new tab";
+  const useMobileRenderer = isMobileReaderMode();
 
-  readerFrame.onload = () => {
-    readerFallback.classList.add("hidden");
-  };
-  readerFrame.onerror = () => {
+  if (useMobileRenderer) {
     readerFrame.classList.add("hidden");
-    readerFallback.classList.remove("hidden");
-  };
+    mobilePdfViewer.classList.remove("hidden");
+    renderMobilePdf(path).then((ok) => {
+      if (!ok) {
+        mobilePdfViewer.classList.add("hidden");
+        readerFallback.classList.remove("hidden");
+      }
+    });
+  } else {
+    clearMobileViewer();
+    mobilePdfViewer.classList.add("hidden");
+    readerFrame.classList.remove("hidden");
+    readerFrame.src = path;
+
+    readerFrame.onload = () => {
+      readerFallback.classList.add("hidden");
+    };
+    readerFrame.onerror = () => {
+      readerFrame.classList.add("hidden");
+      readerFallback.classList.remove("hidden");
+    };
+  }
 
   galleryView.classList.add("hidden");
   readerView.classList.remove("hidden");
@@ -158,9 +238,12 @@ function openReader(globalIndex) {
 }
 
 function closeReader() {
+  mobileRenderToken += 1;
   readerView.classList.add("hidden");
   galleryView.classList.remove("hidden");
   readerFrame.src = "";
+  clearMobileViewer();
+  mobilePdfViewer.classList.add("hidden");
   mainNav.classList.add("hidden");
   if (window.location.hash.startsWith("#read-")) {
     history.replaceState(null, "", window.location.pathname + window.location.search);
