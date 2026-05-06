@@ -3,35 +3,226 @@
  * Sorted: Week 1–8, then Midterm.
  */
 const POEMS = [
-  { title: "Alcohol", category: "Week 1", file: "Alcohol - Moses Yang Poetry I Week 1.pdf" },
-  { title: "Through The Mud", category: "Week 2", file: "Through The Mud - Moses Yang Poetry I Week 2.pdf" },
-  { title: "A Summer Long", category: "Week 3", file: "A Summer Long - Moses Yang Poetry I Week 3.pdf" },
-  { title: "A Kiss Between", category: "Week 4", file: "A Kiss Between - Moses Yang Poetry I Week 4.pdf" },
-  { title: "Unprogrammable", category: "Week 4", file: "Unprogrammable - Moses Yang Poetry I Week 4.pdf" },
-  { title: "Extra Mild", category: "Week 5", file: "Extra Mild - Moses Yang Poetry I Week 5.pdf" },
-  { title: "Sweeping", category: "Week 5", file: "Sweeping - Moses Yang Poetry I Week 5.pdf" },
-  { title: "Writer's Block", category: "Week 5", file: "Writer's Block - Moses Yang Poetry I Week 5.pdf" },
-  { title: "Erasure & Archive", category: "Week 6", file: "Erasure & Archive - Moses Yang Poetry I Week 6.pdf" },
-  { title: "Form & Freedom", category: "Week 7", file: "Form & Freedom - Moses Yang Poetry I Week 7.pdf" },
-  { title: "My Mountain", category: "Week 7", file: "My Mountain - Moses Yang Poetry I Week 7.pdf" },
-  { title: "The Narrows", category: "Week 8", file: "The Narrows - Moses Yang Poetry I Week 8.pdf" },
+  {
+    title: "Alcohol",
+    category: "Week 1",
+    file: "Alcohol - Moses Yang Poetry I Week 1.pdf",
+  },
+  {
+    title: "Through The Mud",
+    category: "Week 2",
+    file: "Through The Mud - Moses Yang Poetry I Week 2.pdf",
+  },
+  {
+    title: "A Summer Long",
+    category: "Week 3",
+    file: "A Summer Long - Moses Yang Poetry I Week 3.pdf",
+  },
+  {
+    title: "A Kiss Between",
+    category: "Week 4",
+    file: "A Kiss Between - Moses Yang Poetry I Week 4.pdf",
+  },
+  {
+    title: "Unprogrammable",
+    category: "Week 4",
+    file: "Unprogrammable - Moses Yang Poetry I Week 4.pdf",
+  },
+  {
+    title: "Extra Mild",
+    category: "Week 5",
+    file: "Extra Mild - Moses Yang Poetry I Week 5.pdf",
+  },
+  {
+    title: "Sweeping",
+    category: "Week 5",
+    file: "Sweeping - Moses Yang Poetry I Week 5.pdf",
+  },
+  {
+    title: "Writer's Block",
+    category: "Week 5",
+    file: "Writer's Block - Moses Yang Poetry I Week 5.pdf",
+  },
+  {
+    title: "Erasure & Archive",
+    category: "Week 6",
+    file: "Erasure & Archive - Moses Yang Poetry I Week 6.pdf",
+  },
+  {
+    title: "Form & Freedom",
+    category: "Week 7",
+    file: "Form & Freedom - Moses Yang Poetry I Week 7.pdf",
+  },
+  {
+    title: "My Mountain",
+    category: "Week 7",
+    file: "My Mountain - Moses Yang Poetry I Week 7.pdf",
+  },
+  {
+    title: "The Narrows",
+    category: "Week 8",
+    file: "The Narrows - Moses Yang Poetry I Week 8.pdf",
+  },
   {
     title: "Apart from a part / A part of apart",
     category: "Midterm",
     file: "Apart from a part _ A part of apart - Moses Yang Poetry I Midterm.pdf",
   },
-  { title: "Hold my hand", category: "Midterm", file: "Hold my hand - Moses Yang Poetry I Midterm.pdf" },
-  { title: "Lost at sea", category: "Midterm", file: "Lost at sea - Moses Yang Poetry I Midterm.pdf" },
+  {
+    title: "Hold my hand",
+    category: "Midterm",
+    file: "Hold my hand - Moses Yang Poetry I Midterm.pdf",
+  },
+  {
+    title: "Lost at sea",
+    category: "Midterm",
+    file: "Lost at sea - Moses Yang Poetry I Midterm.pdf",
+  },
   {
     title: "The Brown shooting concerns",
     category: "Midterm",
     file: "The Brown shooting concerns - Moses Yang Poetry I Midterm.pdf",
   },
-  { title: "Trudging Downstream", category: "Midterm", file: "Trudging Downstream - Moses Yang Poetry I Midterm.pdf" },
-  { title: "Dipty-pical Trauma", category: "Week 9", file: "Dipty-pical Trauma - Moses Yang Poetry I Week 9.pdf" },
-  { title: "you're a human being", category: "Week 10", file: "you're a human being - Moses Yang Poetry I Week 10.pdf" },
-  { title: "Lament From Penelope", category: "Week 11", file: "Lament From Penelope - Moses Yang Poetry I Week 11.pdf"},
-  {title: "小馬", category: "Week 11", file: "小馬 - Moses Yang Poetry I Week 11.pdf"},
+  {
+    title: "Trudging Downstream",
+    category: "Midterm",
+    file: "Trudging Downstream - Moses Yang Poetry I Midterm.pdf",
+  },
+  {
+    title: "Dipty-pical Trauma",
+    category: "Week 9",
+    file: "Dipty-pical Trauma - Moses Yang Poetry I Week 9.pdf",
+  },
+  {
+    title: "you're a human being",
+    category: "Week 10",
+    file: "you're a human being - Moses Yang Poetry I Week 10.pdf",
+  },
+  {
+    title: "Lament From Penelope",
+    category: "Week 11",
+    file: "Lament From Penelope - Moses Yang Poetry I Week 11.pdf",
+  },
+  {
+    title: "小馬",
+    category: "Week 11",
+    file: "小馬 - Moses Yang Poetry I Week 11.pdf",
+  },
+  {
+    title: "田字格",
+    category: "Week 12",
+    file: "田字格 - Moses Yang Poetry I Week 12.pdf",
+  },
+  {
+    title: "A Kiss Between (revised)",
+    category: "Midterm",
+    file: "A Kiss Between (revised) - Moses Yang Poetry I Midterm.pdf",
+  },
+  {
+    title: "Sweeping (revised)",
+    category: "Midterm",
+    file: "Sweeping (revised) - Moses Yang Poetry I Midterm.pdf",
+  },
+  {
+    title: "Through the mud (revised)",
+    category: "Midterm",
+    file: "Through the mud (revised) - Moses Yang Poetry I Midterm.pdf",
+  },
+  {
+    title: "Under Control (revised)",
+    category: "Midterm",
+    file: "Under Control (revised) - Moses Yang Poetry I Midterm.pdf",
+  },
+  {
+    title: "Writer's Block (revised)",
+    category: "Midterm",
+    file: "Writer's Block (revised) - Moses Yang Poetry I Midterm.pdf",
+  },
+  {
+    title: "A Summer Long (revised)",
+    category: "Final",
+    file: "A Summer Long (revised) - Moses Yang Poetry I Final.pdf",
+  },
+  {
+    title: "Ars Poetica",
+    category: "Final",
+    file: "Ars Poetica - Moses Yang Poetry I Final.pdf",
+  },
+  {
+    title: "Constraint or Restraint?",
+    category: "Final",
+    file: "Constraint or Restraint_ - Moses Yang Poetry I Final.pdf",
+  },
+  {
+    title: "Dipty-pical Trauma (revised)",
+    category: "Final",
+    file: "Dipty-pical Trauma (revised) - Moses Yang Poetry I Final.pdf",
+  },
+  {
+    title: "Expression",
+    category: "Final",
+    file: "Expression - Moses Yang Poetry I Final.pdf",
+  },
+  {
+    title: "Formless",
+    category: "Final",
+    file: "Formless - Moses Yang Poetry I Final.pdf",
+  },
+  {
+    title: "Hold My Hand (revised)",
+    category: "Final",
+    file: "Hold My Hand (revised) - Moses Yang Poetry I Final.pdf",
+  },
+  {
+    title: "How To Teach Your Child Your Mother Tongue",
+    category: "Final",
+    file: "How To Teach Your Child Your Mother Tongue - Moses Yang Poetry I Final.pdf",
+  },
+  {
+    title: "My Mountain (revised)",
+    category: "Final",
+    file: "My Mountain (revised) - Moses Yang Poetry I Final.pdf",
+  },
+  {
+    title: "Speak, To Me",
+    category: "Final",
+    file: "Speak, To Me - Moses Yang Poetry I Final.pdf",
+  },
+  {
+    title: "Take A Breath",
+    category: "Final",
+    file: "Take A Breath - Moses Yang Poetry I Final.pdf",
+  },
+  {
+    title: "Trudging Downstream (revised)",
+    category: "Final",
+    file: "Trudging Downstream (revised) - Moses Yang Poetry I Final.pdf",
+  },
+  {
+    title: "Under Control (revised 2x)",
+    category: "Final",
+    file: "Under Control (revised 2x) - Moses Yang Poetry I Final.pdf",
+  },
+  {
+    title: "小馬 (revised)",
+    category: "Final",
+    file: "小馬 (revised) - Moses Yang Poetry I Final.pdf",
+  },
+  {
+    title: "The U.S. Bill of Rights",
+    category: "Final",
+    file: "The U.S. Bill of Rights - Moses Yang Poetry I.pdf",
+  },
+  {
+    title: "Midterm Collection",
+    category: "Midterm",
+    file: "Midterm Collection - Moses Yang Poetry 1 Midterm.pdf",
+  },
+  {
+    title: "Final Collection: Expression",
+    category: "Final",
+    file: "Final Collection: Expression - Moses Yang Poetry I.pdf",
+  },
 ];
 
 const CATEGORY_ORDER = [
@@ -48,6 +239,8 @@ const CATEGORY_ORDER = [
   "Week 9",
   "Week 10",
   "Week 11",
+  "Week 12",
+  "Final",
 ];
 
 const galleryView = document.getElementById("gallery-view");
@@ -118,7 +311,8 @@ async function renderMobilePdf(path) {
       canvas.width = Math.floor(scaledViewport.width);
       canvas.height = Math.floor(scaledViewport.height);
 
-      await page.render({ canvasContext: context, viewport: scaledViewport }).promise;
+      await page.render({ canvasContext: context, viewport: scaledViewport })
+        .promise;
       if (renderToken !== mobileRenderToken) return true;
 
       const pageWrap = document.createElement("div");
@@ -136,7 +330,9 @@ async function renderMobilePdf(path) {
 
 function getFilteredIndices() {
   if (activeFilter === "All") return POEMS.map((_, i) => i);
-  return POEMS.map((p, i) => (p.category === activeFilter ? i : null)).filter((i) => i !== null);
+  return POEMS.map((p, i) => (p.category === activeFilter ? i : null)).filter(
+    (i) => i !== null,
+  );
 }
 
 function renderFilters() {
@@ -246,7 +442,11 @@ function closeReader() {
   mobilePdfViewer.classList.add("hidden");
   mainNav.classList.add("hidden");
   if (window.location.hash.startsWith("#read-")) {
-    history.replaceState(null, "", window.location.pathname + window.location.search);
+    history.replaceState(
+      null,
+      "",
+      window.location.pathname + window.location.search,
+    );
   }
 }
 
