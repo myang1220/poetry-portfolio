@@ -84,9 +84,39 @@ const POEMS = [
     file: "The Brown shooting concerns - Moses Yang Poetry I Midterm.pdf",
   },
   {
+    title: "A Kiss Between (revised)",
+    category: "Midterm",
+    file: "A Kiss Between (revised) - Moses Yang Poetry I Midterm.pdf",
+  },
+  {
+    title: "Sweeping (revised)",
+    category: "Midterm",
+    file: "Sweeping (revised) - Moses Yang Poetry I Midterm.pdf",
+  },
+  {
+    title: "Through the mud (revised)",
+    category: "Midterm",
+    file: "Through the mud (revised) - Moses Yang Poetry I Midterm.pdf",
+  },
+  {
+    title: "Under Control (revised)",
+    category: "Midterm",
+    file: "Under Control (revised) - Moses Yang Poetry I Midterm.pdf",
+  },
+  {
+    title: "Writer's Block (revised)",
+    category: "Midterm",
+    file: "Writer's Block (revised) - Moses Yang Poetry I Midterm.pdf",
+  },
+  {
     title: "Trudging Downstream",
     category: "Midterm",
     file: "Trudging Downstream - Moses Yang Poetry I Midterm.pdf",
+  },
+  {
+    title: "Midterm Collection",
+    category: "Midterm",
+    file: "Midterm Collection - Moses Yang Poetry 1 Midterm.pdf",
   },
   {
     title: "Dipty-pical Trauma",
@@ -114,74 +144,9 @@ const POEMS = [
     file: "田字格 - Moses Yang Poetry I Week 12.pdf",
   },
   {
-    title: "A Kiss Between (revised)",
-    category: "Midterm",
-    file: "A Kiss Between (revised) - Moses Yang Poetry I Midterm.pdf",
-  },
-  {
-    title: "Sweeping (revised)",
-    category: "Midterm",
-    file: "Sweeping (revised) - Moses Yang Poetry I Midterm.pdf",
-  },
-  {
-    title: "Through the mud (revised)",
-    category: "Midterm",
-    file: "Through the mud (revised) - Moses Yang Poetry I Midterm.pdf",
-  },
-  {
-    title: "Under Control (revised)",
-    category: "Midterm",
-    file: "Under Control (revised) - Moses Yang Poetry I Midterm.pdf",
-  },
-  {
-    title: "Writer's Block (revised)",
-    category: "Midterm",
-    file: "Writer's Block (revised) - Moses Yang Poetry I Midterm.pdf",
-  },
-  {
-    title: "A Summer Long (revised)",
-    category: "Final",
-    file: "A Summer Long (revised) - Moses Yang Poetry I Final.pdf",
-  },
-  {
-    title: "Ars Poetica",
-    category: "Final",
-    file: "Ars Poetica - Moses Yang Poetry I Final.pdf",
-  },
-  {
-    title: "Constraint or Restraint?",
-    category: "Final",
-    file: "Constraint or Restraint_ - Moses Yang Poetry I Final.pdf",
-  },
-  {
-    title: "Dipty-pical Trauma (revised)",
-    category: "Final",
-    file: "Dipty-pical Trauma (revised) - Moses Yang Poetry I Final.pdf",
-  },
-  {
     title: "Expression",
     category: "Final",
     file: "Expression - Moses Yang Poetry I Final.pdf",
-  },
-  {
-    title: "Formless",
-    category: "Final",
-    file: "Formless - Moses Yang Poetry I Final.pdf",
-  },
-  {
-    title: "Hold My Hand (revised)",
-    category: "Final",
-    file: "Hold My Hand (revised) - Moses Yang Poetry I Final.pdf",
-  },
-  {
-    title: "How To Teach Your Child Your Mother Tongue",
-    category: "Final",
-    file: "How To Teach Your Child Your Mother Tongue - Moses Yang Poetry I Final.pdf",
-  },
-  {
-    title: "My Mountain (revised)",
-    category: "Final",
-    file: "My Mountain (revised) - Moses Yang Poetry I Final.pdf",
   },
   {
     title: "Speak, To Me",
@@ -189,9 +154,14 @@ const POEMS = [
     file: "Speak, To Me - Moses Yang Poetry I Final.pdf",
   },
   {
-    title: "Take A Breath",
+    title: "How To Teach Your Child Your Mother Tongue",
     category: "Final",
-    file: "Take A Breath - Moses Yang Poetry I Final.pdf",
+    file: "How To Teach Your Child Your Mother Tongue - Moses Yang Poetry I Final.pdf",
+  },
+  {
+    title: "Dipty-pical Trauma (revised)",
+    category: "Final",
+    file: "Dipty-pical Trauma (revised) - Moses Yang Poetry I Final.pdf",
   },
   {
     title: "Trudging Downstream (revised)",
@@ -199,9 +169,44 @@ const POEMS = [
     file: "Trudging Downstream (revised) - Moses Yang Poetry I Final.pdf",
   },
   {
+    title: "The U.S. Bill of Rights",
+    category: "Final",
+    file: "The U.S. Bill of Rights - Moses Yang Poetry I.pdf",
+  },
+  {
+    title: "Formless",
+    category: "Final",
+    file: "Formless - Moses Yang Poetry I Final.pdf",
+  },
+  {
     title: "Under Control (revised 2x)",
     category: "Final",
     file: "Under Control (revised 2x) - Moses Yang Poetry I Final.pdf",
+  },
+  {
+    title: "Take A Breath",
+    category: "Final",
+    file: "Take A Breath - Moses Yang Poetry I Final.pdf",
+  },
+  {
+    title: "Constraint or Restraint?",
+    category: "Final",
+    file: "Constraint or Restraint? - Moses Yang Poetry I Final.pdf",
+  },
+  {
+    title: "Hold My Hand (revised)",
+    category: "Final",
+    file: "Hold My Hand (revised) - Moses Yang Poetry I Final.pdf",
+  },
+  {
+    title: "My Mountain (revised)",
+    category: "Final",
+    file: "My Mountain (revised) - Moses Yang Poetry I Final.pdf",
+  },
+  {
+    title: "A Summer Long (revised)",
+    category: "Final",
+    file: "A Summer Long (revised) - Moses Yang Poetry I Final.pdf",
   },
   {
     title: "小馬 (revised)",
@@ -209,14 +214,9 @@ const POEMS = [
     file: "小馬 (revised) - Moses Yang Poetry I Final.pdf",
   },
   {
-    title: "The U.S. Bill of Rights",
+    title: "Ars Poetica",
     category: "Final",
-    file: "The U.S. Bill of Rights - Moses Yang Poetry I.pdf",
-  },
-  {
-    title: "Midterm Collection",
-    category: "Midterm",
-    file: "Midterm Collection - Moses Yang Poetry 1 Midterm.pdf",
+    file: "Ars Poetica - Moses Yang Poetry I Final.pdf",
   },
   {
     title: "Final Collection: Expression",
